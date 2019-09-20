@@ -48,19 +48,19 @@ class Navbar extends React.Component {
               <MDBCollapse isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav left>
                   <MDBNavItem active>
-                    <MDBNavLink to="../Home">Home</MDBNavLink>
+                    <MDBNavLink to="/">Home</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="../components/About">About</MDBNavLink>
+                    <MDBNavLink to="/about">About</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="/components/Toolkit">Skills</MDBNavLink>
+                    <MDBNavLink to="/skills">Skills</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="/components/Projects">Projects</MDBNavLink>
+                    <MDBNavLink to="/projects">Projects</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="/components/Contact">Contact</MDBNavLink>
+                    <MDBNavLink to="/contact">Contact</MDBNavLink>
                   </MDBNavItem>
                 </MDBNavbarNav>
               </MDBCollapse>
