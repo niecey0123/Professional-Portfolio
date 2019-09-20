@@ -1,7 +1,33 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput,  MDBAnimation  } from 'mdbreact';
 
-const Contact = () => {
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "", email: "", message: "" };
+  }
+
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  render(){
+    const { name, email, message } = this.state;
   return (
     <MDBContainer>
        <h2 className="h1-responsive font-weight-bold text-center my-5">
@@ -9,7 +35,7 @@ const Contact = () => {
       </h2>
       <MDBRow>
         <MDBCol md="11" className="md-0 mb-5">
-          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+          <form onSubmit={this.handleSubmit}>
           <h3 className="text-center w-responsive mx-auto pb-5">
         Have a question or want to work together?
       </h3>
@@ -21,8 +47,8 @@ const Contact = () => {
                 type="text"
                 validate
                 error="wrong"
-                success="right"
-                name="name" 
+                success="right" 
+                onChange={this.handleChange}
               />
               <MDBInput
                 label="Your email"
@@ -33,6 +59,7 @@ const Contact = () => {
                 error="wrong"
                 success="right"
                 name="email"
+                onChange={this.handleChange}
               />
               <MDBInput
                 label="Subject"
@@ -43,6 +70,7 @@ const Contact = () => {
                 error="wrong"
                 success="right"
                 name="subject"
+                onChange={this.handleChange}
               />
               <MDBInput
                 type="textarea"
@@ -50,6 +78,7 @@ const Contact = () => {
                 label="Your message"
                 icon="pencil-alt"
                 name="message"
+                onChange={this.handleChange}
               />
             </div>
             <div className="text-center">
@@ -66,5 +95,6 @@ const Contact = () => {
     </MDBContainer>
   );
 };
+}
 
 export default Contact;
