@@ -35,7 +35,8 @@ class Contact extends React.Component {
       </h2>
       <MDBRow>
         <MDBCol md="11" className="md-0 mb-5">
-          <form onSubmit={this.handleSubmit} >
+          <form onSubmit={this.handleSubmit} name="contact" method="post">
+    <input type="hidden" name="form-name" value="contact" />
           <h3 className="text-center w-responsive mx-auto pb-5">
         Have a question or want to work together?
       </h3>
