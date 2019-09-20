@@ -35,7 +35,7 @@ class Contact extends React.Component {
       </h2>
       <MDBRow>
         <MDBCol md="11" className="md-0 mb-5">
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} >
           <h3 className="text-center w-responsive mx-auto pb-5">
         Have a question or want to work together?
       </h3>
@@ -87,7 +87,7 @@ class Contact extends React.Component {
               />
             </div>
             <div className="text-center">
-              <MDBBtn outline color="secondary" type="submit">
+              <MDBBtn outline color="secondary" type="submit" onSubmit={this.handleSubmit}>
                 Send <MDBIcon far icon="paper-plane" className="ml-1" />
               </MDBBtn>
             </div>
