@@ -22,10 +22,10 @@ const Projects = () => {
           <MDBCardBody className="pb-0">
             <h4 className="font-weight-bold my-3">The Big O (Obstacle) Dress Up Game</h4>
             <p className="grey-text">
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae.
+            Children's Cognitive Training App tailored to help children build up 
+            muscle memory by following timed instructions while dressing up a character.
             </p>
-           <a href="https:/wizardly-hypatia-64b87d.netlify.com"> <MDBBtn color="indigo" size="sm">
+           <a href="https:/wizardly-hypatia-64b87d.netlify.com"> <MDBBtn gradient="purple" size="sm">
               <MDBIcon far icon="clone" className="left" /> View project
             </MDBBtn>
             </a>
@@ -45,10 +45,10 @@ const Projects = () => {
           <MDBCardBody className="pb-0">
             <h4 className="font-weight-bold my-3">Finder's Keeper's App</h4>
             <p className="grey-text">
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae.
+             Human Resource App to help low-income New Yorkers find job centers in their neighborhoods 
+            that offer Temporary assistance and other resources available if eligible.
             </p>
-            <a href="https://nyc-job-center.herokuapp.com"> <MDBBtn color="indigo" size="sm">
+            <a href="https://nyc-job-center.herokuapp.com"> <MDBBtn gradient="purple" size="sm">
               <MDBIcon far icon="clone" className="left" />View project
             </MDBBtn>
             </a>
@@ -68,10 +68,10 @@ const Projects = () => {
           <MDBCardBody className="pb-0">
             <h4 className="font-weight-bold my-3">Excel4Kids Learning App</h4>
             <p className="grey-text">
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae.
+            Academic LMS with Parent and Children portals offering children tools/resources 
+            such as Reading Comprehension, Writing Techniques, & Study session/groups.
             </p>
-            <a href="https://naughty-clarke-83029d.netlify.com"><MDBBtn color="indigo" size="sm">
+            <a href="https://naughty-clarke-83029d.netlify.com"><MDBBtn gradient="purple" size="sm">
               <MDBIcon far icon="clone" className="left" />View project
             </MDBBtn>
             </a>

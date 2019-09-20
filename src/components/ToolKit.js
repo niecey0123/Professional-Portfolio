@@ -64,7 +64,7 @@ const BlogPage = () => {
       </MDBAnimation>
 
     </>
-            <a href="https://docdro.id/nWpkqhF"><MDBBtn color="success" size="md" className="waves-light ">
+            <a href="https://docdro.id/nWpkqhF"><MDBBtn gradient="purple" size="md" className="waves-light ">
               view resume
             </MDBBtn>
             </a>

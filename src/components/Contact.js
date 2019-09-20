@@ -7,9 +7,9 @@ const ContactPage = () => {
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Contact
       </h2>
-      <p className="text-center w-responsive mx-auto pb-5">
+      <h3 className="text-center w-responsive mx-auto pb-5">
         Have a question or want to work together?
-      </p>
+      </h3>
       <MDBRow>
         <MDBCol md="9" className="md-0 mb-5">
           <form>
@@ -49,7 +49,7 @@ const ContactPage = () => {
             </MDBRow>
           </form>
           <div className="text-center text-md-left">
-            <MDBBtn color="primary" size="md">
+            <MDBBtn gradient="purple" size="md">
               Send
             </MDBBtn>
           </div>
@@ -57,25 +57,27 @@ const ContactPage = () => {
         <MDBCol md="3" className="text-center">
           <ul className="list-unstyled mb-0">
             <li>
-              <MDBIcon icon="map-marker-alt" size="2x" className="blue-text" />
+              <MDBIcon icon="map-marker-alt" size="2x" className="cyan-text" />
               <p>Brooklyn, NY ,11213 USA</p>
             </li>
             <li>
-              <MDBIcon icon="phone" size="2x" className="blue-text mt-4" />
+              <MDBIcon icon="phone" size="2x" className="cyan-text mt-4" />
               <p>+ 917 409 4835</p>
             </li>
             <li>
-              <MDBIcon icon="envelope" size="2x" className="blue-text mt-4" />
+              <MDBIcon icon="envelope" size="2x" className="cyan-text mt-4" />
               <p>s.crumpler@gmail.com</p>
             </li>
           </ul>
         </MDBCol>
       </MDBRow>
       <MDBAnimation reveal type="fadeInLeft" >
-      <a href="#"><MDBIcon icon="arrow-alt-circle-up" size="4x"  /></a>
+      <a href="#"><MDBIcon icon="arrow-alt-circle-up" className="cyan-text  pr-3" size="4x"  /></a>
       </MDBAnimation>
     </MDBContainer>
   );
 }
 
 export default ContactPage;
+
+

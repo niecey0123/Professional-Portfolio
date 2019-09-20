@@ -4,7 +4,7 @@ import {  MDBRow, MDBCol, MDBIcon } from "mdbreact";
 const About = () => {
   return (
       <main>
-      <section className="text-center my-5">
+      <section className="text-center my-5" id="about">
         <h2 className="h1-responsive font-weight-bold my-5">
           About me
         </h2>
