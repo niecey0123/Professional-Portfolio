@@ -6,7 +6,7 @@ const Footer = () => {
     <MDBFooter color=" rgba-brown-strong" className="font-small pt-4 mt-4">
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} <a href="#"> Shaniece Crumpler </a>
+          &copy; {new Date().getFullYear()} <p> Shaniece Crumpler </p>
           <br></br>
           <ul className="list-inline text-center list-unstyled">
                 <li className="list-inline-item">

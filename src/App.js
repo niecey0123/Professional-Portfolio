@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { MDBBtn, MDBCol, MDBContainer, MDBRow } from "mdbreact";
 import "./index.css";
 import Navbar from './components/NavBar';
 import About from "./components/About";

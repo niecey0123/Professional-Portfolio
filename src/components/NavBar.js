@@ -11,9 +11,7 @@ import {
   MDBMask,
   MDBView,
   MDBCard,
-  MDBCardBody,
-  MDBSmoothScroll
-} from "mdbreact";
+  MDBCardBody} from "mdbreact";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
