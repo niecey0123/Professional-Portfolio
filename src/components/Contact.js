@@ -9,7 +9,7 @@ const encode = (data) => {
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "" };
+    this.state = { name: "", email: "", message: "", subject: "" };
   }
 
   handleSubmit = e => {
@@ -27,7 +27,7 @@ class Contact extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render(){
-    const { name, email, message } = this.state;
+    const { name, email, message ,subject } = this.state;
   return (
     <MDBContainer>
        <h2 className="h1-responsive font-weight-bold text-center my-5">
@@ -49,6 +49,8 @@ class Contact extends React.Component {
                 error="wrong"
                 success="right" 
                 onChange={this.handleChange}
+                name ="name"
+                value={name}
               />
               <MDBInput
                 label="Your email"
@@ -60,6 +62,7 @@ class Contact extends React.Component {
                 success="right"
                 name="email"
                 onChange={this.handleChange}
+                value={email}
               />
               <MDBInput
                 label="Subject"
@@ -71,6 +74,7 @@ class Contact extends React.Component {
                 success="right"
                 name="subject"
                 onChange={this.handleChange}
+                value={subject}
               />
               <MDBInput
                 type="textarea"
@@ -79,6 +83,7 @@ class Contact extends React.Component {
                 icon="pencil-alt"
                 name="message"
                 onChange={this.handleChange}
+                value={message}
               />
             </div>
             <div className="text-center">
