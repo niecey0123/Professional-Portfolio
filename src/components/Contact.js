@@ -3,6 +3,7 @@ import {  MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBInput, MDBAnimation 
 
 const ContactPage = () => {
   return (
+    
     <MDBContainer>
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Contact
@@ -12,11 +13,11 @@ const ContactPage = () => {
       </h3>
       <MDBRow>
         <MDBCol md="9" className="md-0 mb-5">
-          <form>
+          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
             <MDBRow>
               <MDBCol md="6">
                 <div className="md-form mb-0">
-                  <MDBInput type="text" id="contact-name" label="Your name" />
+                  <MDBInput type="text" id="contact-name" label="Your name" name="name" />
                 </div>
               </MDBCol>
               <MDBCol md="6">
@@ -25,6 +26,7 @@ const ContactPage = () => {
                     type="text"
                     id="contact-email"
                     label="Your email"
+                    name="email"
                   />
                 </div>
               </MDBCol>
@@ -32,7 +34,7 @@ const ContactPage = () => {
             <MDBRow>
               <MDBCol md="12">
                 <div className="md-form mb-0">
-                  <MDBInput type="text" id="contact-subject" label="Subject" />
+                  <MDBInput type="text" id="contact-subject" name="subject" label="Subject" />
                 </div>
               </MDBCol>
             </MDBRow>
@@ -43,13 +45,14 @@ const ContactPage = () => {
                     type="textarea"
                     id="contact-message"
                     label="Your message"
+                    name="message"
                   />
                 </div>
               </MDBCol>
             </MDBRow>
           </form>
           <div className="text-center text-md-left">
-            <MDBBtn gradient="purple" size="md">
+            <MDBBtn gradient="purple" size="md" type="submit">
               Send
             </MDBBtn>
           </div>
