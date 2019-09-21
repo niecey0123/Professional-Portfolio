@@ -88,7 +88,7 @@ class Contact extends React.Component {
               />
             </div>
             <div className="text-center">
-              <MDBBtn outline color="secondary" type="submit" onSubmit={this.handleSubmit}>
+              <MDBBtn outline color="secondary" type="submit">
                 Send <MDBIcon far icon="paper-plane" className="ml-1" />
               </MDBBtn>
             </div>
