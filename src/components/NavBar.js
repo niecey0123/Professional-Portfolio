@@ -372,7 +372,10 @@ function NavBar(params) {
                   <h4>
                     <strong>Get in Touch</strong>
                   </h4>
-                  <form action="POST" data-netlify="true">
+                  <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                  <p class="hidden">
+                   <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div className="form-group">
                       <input
                         type="text"
@@ -410,6 +413,7 @@ function NavBar(params) {
                       className="btn btn-default"
                       type="submit"
                       name="button"
+                      value="send"
                     >
                       <i className="fa fa-paper-plane-o" aria-hidden="true" />{" "}
                       Submit
