@@ -400,7 +400,9 @@ import {  MDBRow, MDBCol, MDBIcon ,
                   <h4>
                     <strong>Get in Touch</strong>
                   </h4>
-                  <form onSubmit={this.handleSubmit} >
+                  <form onSubmit={this.handleSubmit}
+                  netlify="true"
+                  netlify-honeypot="bot-field" >
                     
                     <div className="form-group">
                       <input
