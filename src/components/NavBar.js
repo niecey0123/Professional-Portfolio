@@ -3,7 +3,7 @@ import React from 'react';
 import {  MDBRow, MDBCol, MDBIcon ,
  MDBCardBody, MDBBtn, MDBView, MDBMask,
  MDBCard, MDBProgress, MDBAnimation ,MDBContainer  } from "mdbreact";
-import axios from 'axios'
+
 
 
  const encode = (data) => {
@@ -20,19 +20,16 @@ import axios from 'axios'
     }
 
     handleSubmit = e => {
-      try {
-        await axios.post('/', encode({ 'form-name': 'contact', ...values }), {
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        })
-        this.setState({ submitted: true })
-      } catch (err) {
-        window.alert(
-          'There was a problem submitting your form! Try again or reload the page :)',
-        )
-        this.setState({ submitted: true })
-      }
-    }
-  
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...this.state })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      e.preventDefault();
+    };
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
