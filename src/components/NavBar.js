@@ -15,8 +15,7 @@ import {  MDBRow, MDBCol, MDBIcon ,
     constructor(props) {
       super(props);
       this.state = { name: "", email: "", phone: "", message: "" };
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this)
+    
 
     }
 
