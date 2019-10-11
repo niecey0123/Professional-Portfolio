@@ -448,7 +448,7 @@ import {  MDBRow, MDBCol, MDBIcon ,
                       className="btn btn-default"
                       type="submit"
                       name="button"
-                      value="submit"
+                
                     >
                       <i className="fa fa-paper-plane-o" aria-hidden="true" />{" "}
                       Submit
