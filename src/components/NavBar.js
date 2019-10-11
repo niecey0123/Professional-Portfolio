@@ -15,6 +15,9 @@ import {  MDBRow, MDBCol, MDBIcon ,
     constructor(props) {
       super(props);
       this.state = { name: "", email: "", phone: "", message: "" };
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this)
+
     }
 
     handleSubmit = e => {
@@ -399,6 +402,7 @@ import {  MDBRow, MDBCol, MDBIcon ,
                     <strong>Get in Touch</strong>
                   </h4>
                   <form onSubmit={this.handleSubmit} >
+                    
                     <div className="form-group">
                       <input
                         type="text"
