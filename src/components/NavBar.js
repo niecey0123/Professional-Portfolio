@@ -311,7 +311,7 @@ import {  MDBRow, MDBCol, MDBIcon ,
                     build up muscle memory by following timed instructions while
                     dressing up a character.
                   </p>
-                  <a href="https:/wizardly-hypatia-64b87d.netlify.com">
+                  <a href="https://wizardly-hypatia-64b87d.netlify.com">
                     {" "}
                     <MDBBtn gradient="purple" size="sm">
                       <MDBIcon far icon="clone" className="left" /> View project
