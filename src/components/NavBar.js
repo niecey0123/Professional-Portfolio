@@ -6,8 +6,34 @@ import {  MDBRow, MDBCol, MDBIcon ,
 
 
 
+ const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+  class NavBar  extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { name: "", email: "", phone: "", message: "" };
+    }
 
-function NavBar(params) {
+    handleSubmit = e => {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...this.state })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      e.preventDefault();
+    };
+
+    handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+    render() { 
+      const { name, email, message ,phone} = this.state;
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -372,16 +398,15 @@ function NavBar(params) {
                   <h4>
                     <strong>Get in Touch</strong>
                   </h4>
-                  <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                  <p class="hidden">
-                   <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                    </p>
+                  <form onSubmit={this.handleSubmit} >
                     <div className="form-group">
                       <input
                         type="text"
                         className="form-control"
                         name="name"
                         placeholder="Name"
+                        onChange={this.handleChange}
+                        value={name}
                       />
                     </div>
                     <div className="form-group">
@@ -390,6 +415,8 @@ function NavBar(params) {
                         className="form-control"
                         name="email"
                         placeholder="E-mail"
+                        onChange={this.handleChange}
+                        value={email}
                       />
                     </div>
                     <div className="form-group">
@@ -398,6 +425,8 @@ function NavBar(params) {
                         className="form-control"
                         name="phone"
                         placeholder="Phone"
+                        onChange={this.handleChange}
+                        value={phone}
                       />
                     </div>
                     <div className="form-group">
@@ -406,14 +435,16 @@ function NavBar(params) {
                         name="message"
                         rows={3}
                         placeholder="Message"
-                        defaultValue={""}
+                        defaultValue={message}
+                        onChange={this.handleChange}
+                     
                       />
                     </div>
                     <button
                       className="btn btn-default"
                       type="submit"
                       name="button"
-                      value="send"
+                      value="submit"
                     >
                       <i className="fa fa-paper-plane-o" aria-hidden="true" />{" "}
                       Submit
@@ -436,7 +467,7 @@ function NavBar(params) {
       </div>
     </div>
   );
-  
+    }
 }
 
 export default NavBar
