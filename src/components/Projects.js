@@ -48,7 +48,7 @@ const Projects = () => {
              Human Resource App to help low-income New Yorkers find job centers in their neighborhoods 
             that offer Temporary assistance and other resources available if eligible.
             </p>
-            <a href="https://nyc-job-center.herokuapp.com"> <MDBBtn gradient="purple" size="sm">
+            <a href="https://nycresources.herokuapp.com/"> <MDBBtn gradient="purple" size="sm">
               <MDBIcon far icon="clone" className="left" />View project
             </MDBBtn>
             </a>
